@@ -1,74 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="./styles/style.css">
-</head>
-<body>
+    <link rel="stylesheet" href="./styles/style.css" />
+  </head>
+  <body>
     <section class="container" id="container">
-        <table class="mainTable" cellpadding = '0' id="table">
-            <tr>
-                <td>Должность</td>
-                <td>Имя</td>
-                <td>Фамилия</td>
-                <td>Отчество</td>
-                <td>Возраст</td>
-                <td>Опыт</td>
-                <td>Организация</td>
-                <td></td>
-            </tr>    
-        </table>
-        <div class="button" id="create">Создать</div>
-    </section> 
+      <table class="mainTable" cellpadding="0" id="table">
+        <tr>
+          <td>Должность</td>
+          <td>Имя</td>
+          <td>Фамилия</td>
+          <td>Отчество</td>
+          <td>Возраст</td>
+          <td>Опыт</td>
+          <td>Организация</td>
+          <td></td>
+        </tr>
+      </table>
+
+      <div class="button" id="create">Создать</div>
+    </section>
     <section class="container2" id="container2">
-        <b id="title">Новый работник:</b>
-        <form name="newWorker" action = "">
-            <p>Должность: <select name="position" id="position">
-                <option value="" style="display:none">Выберите должность</option>
-                <option value="1" id="1">Frontend-developer</option>
-                <option value="2" id="2">Manager</option>
-            </select></p>
-            <p>Имя: <input type="text" name="name" id="name"></p>
-            <p>Фамилия: <input type="text" name="surname" id="surname"></p>
-            <p>Отчество: <input type="text" name="middleName" id="middleName"></p>
-            <p>Возраст: <input type="text" name="age" id="age"></p>
-            <p>Стаж: <input type="text" name="experience" id="experience"></p>
-            <p>Организация: <input type="text" id="organization"></p>
-            <p style="display:none" id="programmingLanguage">Язык программирования: <select name = "programmingLanguage" id="listProgrammingLanguage">
-                <option value="" style="display:none"></option>
-                <option>PHP</option>
-                <option>SQL</option>
-                <option>JavaScript</option>
-                <option>Python</option>
-                <option>Go</option>
-                <option>Ruby</option>
-            </select>  </p>
-            <p style="display:none" id="frameworks">Фреймворк: <select name = "frameworks" id="listFrameworks">
-                <option value="" style="display:none"></option>
-                <option>Angular</option>
-                <option>React</option>
-                <option>Vue</option>
-                <option>Ember</option>
-                <option>Backbone</option>
-            </select> </p>
-            <p style="display:none" id="englishProficiency">Знание английского: <input type="checkbox"  id="knowEnglish"></p>
-            <p style="display:none" id="education">Образование: <select name = "education" id="listEducation">
-                <option value="" style="display:none"></option>
-                <option>Высшее</option>
-                <option>Средне-специальное</option>
-                <option>Среднее</option>
-                <option>Школьное</option>
-            </select> </p>
-            <div class="btns">
-                <div class="btn" id="save">Сохранить</div>
-                <div class="btn" id="clear">Очистить</div>
-            </div>
-        </form>
+      <b id="title">Новый работник:</b>
+      <form name="newWorker" action="">
+        <p class="pStyle">
+          Должность:
+          <select name="position" id="position" required>
+            <option value="" style="display:none">Выберите должность</option>
+            <option value="FrontendDeveloper" id="1">Frontend-developer</option>
+            <option value="Manager" id="2">Manager</option>
+          </select>
+        </p>
+        <p class="pStyle">Имя: <input type="text" name="name" id="name" required maxlength="65" /></p>
+        <p class="pStyle">Фамилия: <input type="text" name="surname" id="surname" pattern ="[0-9]{3}" maxlength="65"/></p>
+        <p class="pStyle">Отчество: <input type="text" name="middleName" id="middleName" maxlength="65" /></p>
+        <p class="pStyle">Возраст: <input type="number" name="age" id="age" maxlength="3" /></p>
+        <p class="pStyle">Стаж: <input type="number" name="experience" id="experience" maxlength="2" /></p>
+        <p class="pStyle">Организация: <input type="text" id="organization" required maxlength="65" /></p>
+        <p class="pStyle" style="display:none" id="programmingLanguage">
+          Язык программирования:
+          <select name="programmingLanguage" id="listProgrammingLanguage">
+            <option value="" style="display:none"></option>
+            <option>PHP</option>
+            <option>SQL</option>
+            <option>JavaScript</option>
+            <option>Python</option>
+            <option>Go</option>
+            <option>Ruby</option>
+          </select>
+        </p>
+        <p class="pStyle" style="display:none" id="frameworks">
+          Фреймворк:
+          <select name="frameworks" id="listFrameworks" >
+            <option value="" style="display:none"></option>
+            <option>Angular</option>
+            <option>React</option>
+            <option>Vue</option>
+            <option>Ember</option>
+            <option>Backbone</option>
+          </select>
+        </p>
+        <p style="display:none" id="englishProficiency" class="pStyle">
+          Знание английского: <input type="checkbox" id="knowEnglish" />
+        </p>
+        <p class="pStyle" style="display:none" id="education">
+          Образование:
+          <select name="education" id="listEducation">
+            <option value="" style="display:none"></option>
+            <option>Высшее</option>
+            <option>Средне-специальное</option>
+            <option>Среднее</option>
+            <option>Школьное</option>
+          </select>
+        </p>
+        <div class="btns">
+          <button class="btn" type="submit" id="save">Сохранить</button>
+          <div class="btn2" id="clear">Очистить</div>
+        </div>
+      </form>
     </section>
     <span id="newSpan"></span>
     <p id="newP"></p>
-<script src="./js/script.js"></script>    
-</body>
+    <script src="./js/script.js"></script>
+  </body>
 </html>

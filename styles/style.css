@@ -9,19 +9,6 @@
     border-radius: 30px;
 }
 
-.button{
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    width: 100px;
-    margin-left: 500px;
-    margin-top: 200px;
-    margin-right: 10px;
-    text-align: center;
-    border: 1px solid black;
-    border-radius: 30px;
-}
-
 .mainTable {
     margin: 50px auto;
     border-spacing: 0;
@@ -49,3 +36,106 @@ td span {
     color: rgb(148, 22, 197);
     cursor: pointer;
 }
+#table {
+    background: #f5ffff;
+    border-collapse: collapse;
+    text-align: left;
+    font-size: 20px;
+  }
+ 
+  #table tr:nth-child(odd) {
+    background: #ebf3f9;
+  }
+
+  #table td {
+    border: 1px solid #e3eef7;
+    padding: 10px 15px;
+    position: relative;
+    transition: all 0.5s ease;
+  }
+  #table tbody:hover td {
+    color: transparent;
+    text-shadow: 0 0 3px #a09f9d;
+  }
+  #table tbody:hover tr:hover td {
+    color: #444444;
+    text-shadow: none;
+  }
+
+
+  .button, .btn, .btn2 {
+    position: relative;
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    text-shadow: -1px -1px #000;
+    user-select: none;
+    padding: .8em 2em;
+    outline: none;
+    background-color: #000;
+    background-image: linear-gradient(45deg, rgba(255,255,255,.0) 30%, rgba(255,255,255,.8), rgba(255,255,255,.0) 70%), radial-gradient(190% 100% at 50% 0%, rgba(255,255,255,.7) 0%, rgba(255,255,255,.5) 50%, rgba(0,0,0,0) 50%);
+    background-repeat: no-repeat;
+    background-size: 200% 100%, auto;
+    background-position: 200% 0, 0 0;
+    box-shadow: rgba(0,0,0,.3) 0 2px 5px;
+    font-size: 20px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    width: 100px;
+    text-align: center;
+    border: 1px solid black;
+    border-radius: 30px;
+    cursor: pointer;
+  } 
+  .button {
+    margin-left: 350px;
+  }
+  .button:active , .btn:active , .btn2:active{
+    top: 1px;
+    box-shadow: none;
+  }
+  .button:hover, .btn :hover, .btn2 :hover {
+    transition: .5s linear;
+    background-position: -200% 0, 0 0;
+  }
+
+  .btn {
+     padding: 20px 90px;
+     margin-left: 150px;
+  }
+  .btn2 {
+      font-size: 22px;
+  }
+select {
+    width: 500px;
+      height: 30px;
+      font-size: 20px;
+      display: flex;
+      justify-content: space-between;
+}
+  input {
+      width: 500px;
+      height: 30px;
+  }
+  .pStyle {
+      font-size: 20px;
+      width: 750px;
+      display: flex;
+      justify-content: space-between;
+  }
+  option {
+    font-size: 20px;
+  }
+  b{
+      font-size: 30px;
+      margin-left: 20%;
+  }
+
+
+
+  #listProgrammingLanguage, #listFrameworks, #listEducation{
+    position: relative;
+  margin-left: 250px;
+  margin-top: -25px;
+  }
